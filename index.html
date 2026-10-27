@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Varanasi Nowcast</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map"></div>
+<aside id="panel">
+  <div class="top"><span>Varanasi Nowcast</span><span id="clock"></span></div>
+  <div id="idle"><p>Tap anywhere on the map for a short-term forecast (up to 30 minutes) at that spot.</p></div>
+  <div id="out" hidden>
+    <div class="place" id="place"></div>
+    <h1 id="headline"></h1>
+    <p class="detail" id="detail"></p>
+    <div class="chance"><span>Chance of rain, next 30 min</span><span id="pct"></span></div>
+    <div class="bar"><i id="fill"></i></div>
+    <ul class="notes" id="notes"></ul>
+    <table>
+      <tr><th></th><th>Now</th><th id="hz">Later</th></tr>
+      <tr><td>Temperature</td><td id="t0"></td><td id="t1"></td></tr>
+      <tr><td>Humidity</td><td id="h0"></td><td id="h1"></td></tr>
+      <tr><td>Wind</td><td id="w0"></td><td id="w1"></td></tr>
+    </table>
+    <div class="meta" id="meta"></div>
+  </div>
+  <div class="foot" id="foot"></div>
+</aside>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
